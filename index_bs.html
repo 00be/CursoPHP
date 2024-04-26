@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+    <div class="app-background">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="container">
+                    <a class="navbar-brand" href="#">
+                        <img class="logo-nav" src="./img/logo-netflix.png" alt="Logo Netflix" title="Logo Netflix">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <div class="navbar-nav ml-auto">
+                            <a class="nav-link" href="#">Inicio</a>
+                            <a class="nav-link" href="#">Series</a>
+                            <a class="nav-link" href="#">Películas</a>
+                            <a class="nav-link" href="#">Novedades</a>
+                            <a class="nav-link" href="#">Mi Lista</a>
+                        </div>
+                        <div class="nav-btns">
+                            <button class="nav-btn fas fa-search"></button>
+                            <button class="nav-btn fas fa-bell"></button>
+                            <img class="user-img" src="./img/user 1.png" alt="Imagen de usuario"
+                                title="Avatar del usuario">
+                            <button class="nav-btn fas fa-caret-down"></button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="container">
+            <div class="banner-destaque row">
+                <div class="col-md-6">
+                    <img src="./img/descarga-removebg-preview.png" class="img-fluid" alt="Póster" title="Póster">
+                </div>
+                <div class="col-md-6">
+                    <p class="banner-paragraph">Miles de años atrás, cinco tribus africanas luchaban por poseer un
+                        meteorito que contenía vibranium. Un guerrero ingirió una "hierba en forma de corazón" afectada
+                        por el metal y obtuvo habilidades sobrehumanas, convirtiéndose en la primera "Pantera Negra". Él
+                        unió a todas las tribus, excepto los Jabari, para formar la nación de Wakanda. .</p>
+                    <div class="banner__buttons-container">
+                        <button class="banner-button-play btn btn-primary">
+                            <span class="fas fa-play"></span>
+                            <span class="button-text">Ver</span>
+                        </button>
+                        <button class="banner-button-info btn btn-secondary">
+                            <span class="fas fa-circle-info"></span>
+                            <span class="button-text">Más información</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="movies">
+
+                <!-- mi Lista -->
+                <h3 class="movies__mylist__title">Mi Lista</h3>
+                <div class="carousel-container">
+                  <div class="carousel-slide" id="myListCarousel">
+                    <div class="item">
+                      <img src="./img/01 Snowpiercer.jpg" alt="Snowpiercer" />
+                    </div>
+                    <div class="item">
+                      <img src="./img/02 Agente Nocturno.jpg" alt="Agente" />
+                    </div>
+                    <div class="item">
+                      <img src="./img/03 Altered Carbon.jpg" alt="Altered Carbon" />
+                    </div>
+                    <div class="item">
+                      <img src="./img/05_aguas.jpg" alt="Aguas" />
+                    </div>
+                    <div class="item">
+                      <img src="./img/06 StarP.jpg" alt="Trek Picard" />
+                    </div>
+                    <div class="item">
+                      <img src="./img/07 codigos.jpg" alt="Codigo" />
+                    </div>
+                    <div class="item">
+                      <img src="./img/08 la madre.jpg" alt="La madre" />
+                    </div>
+                    <div class="item">
+                        <img src="./img/09 anne.jpg" alt="anne" />
+                      </div>
+                    <button class="fa-solid fa-angle-left" onclick="scrollCarousel('myListCarousel', 'left')"></button>
+                    <button class="fa-solid fa-angle-right" onclick="scrollCarousel('myListCarousel', 'right')"></button>
+                  </div>
+                </div>
+              </div>
+        
+              <!-- Mas vistos -->
+              <h3 class="movies__top10__title">Más Vistos</h3>
+              <div class="carousel-container">
+                <div class="carousel-slide" id="top10Carousel">
+                  <div class="item">
+                    <img src="./img/10 El padrino.jpg" alt="El padrino" />
+                  </div>
+                  <div class="item">
+                    <img src="./img/11 Merlona.jpg" alt="Merlina" />
+                  </div>
+                  <div class="item">
+                    <img src="./img/11 Mision Submarino.jpg" alt="Mission" />
+                  </div>
+                  <div class="item">
+                    <img src="./img/12 Crepusculo.jpg" alt="Crepusculo" />
+                  </div>
+                  <div class="item">
+                    <img src="./img/13 los 100.jpg" alt="Los 100" />
+                  </div>
+                  <div class="item">
+                    <img src="./img/14 otra vida.jpg" alt="Otra vida" />
+                  </div>
+                  <div class="item">
+                    <img src="./img/15 invasion.jpg" alt="Invasion" />
+                  </div>
+                  <button class="fa-solid fa-angle-left" onclick="scrollCarousel('top10Carousel', 'left')"></button>
+                  <button class="fa-solid fa-angle-right" onclick="scrollCarousel('top10Carousel', 'right')"></button>
+                </div>
+              </div>
+        
+              <!-- series Recomendadas -->
+              <h3 class="movies__top10__title">Recomendadas</h3>
+              <div class="carousel-container">
+                <div class="carousel-slide" id="estrangSeriesCarousel">
+                  <div class="item">
+                    <img src="./img/23 fantasmas.jpg" alt="Fantasmas" />
+                  </div>
+                  <div class="item">
+                    <img src="./img/16 gambito.jpg" alt="Gambito" />
+                  </div>
+                  <div class="item">
+                    <img src="./img/17 Flash.jpg" alt="Flash" />
+                  </div>
+                  <div class="item">
+                    <img src="./img/18 pretty.jpg" alt="Pretty" />
+                  </div>
+                  <div class="item">
+                    <img src="./img/19 star trek oscu.jpg" alt="Star Trek" />
+                  </div>
+                  <div class="item">
+                    <img src="./img/20 prodigio.jpg" alt="Prodigio" />
+                  </div>
+                  <div class="item">
+                    <img src="./img//21 titanes.jpg" alt="Titanes" />
+                  </div>
+                  <div class="item">
+                    <img src="./img/22 sense.jpg" alt="Tense" />
+                  </div>
+                  <button class="fa-solid fa-angle-left" onclick="scrollCarousel('estrangSeriesCarousel', 'left')"></button>
+                  <button class="fa-solid fa-angle-right" onclick="scrollCarousel('estrangSeriesCarousel', 'right')"></button>
+                </div>
+              </div>
+        
+              <!-- Categoria Varios -->
+              <h3 class="movies__top10__title">Categoria Humor</h3>
+              <div class="carousel-container">
+                <div class="scroll-container">
+                  <div class="carousel-slide" id="humorCarousel">
+                    <div class="item">
+                      <img src="./img/24 alice.jpg" alt="Alicia" />
+                    </div>
+                    <div class="item">
+                      <img src="./img/26 misterio.jpg" alt="Misterio" />
+                    </div>
+                    <div class="item">
+                      <img src="./img/28 pacifico.jpg" alt="Titanes del pacifico" />
+                    </div>
+                    <div class="item">
+                      <img src="./img/28 spider.jpg" alt="Spider" />
+                    </div>
+                    <div class="item">
+                      <img src="./img/30 ben0.jpg" alt="ben10" />
+                    </div>
+                    <div class="item">
+                      <img src="./img/02 Agente Nocturno.jpg" alt="Agente" />
+                    </div>
+                    <div class="item">
+                      <img src="./img/11 Merlona.jpg" alt="merlina" />
+                    </div>
+        
+                    <button class="fa-solid fa-angle-left " onclick="scrollCarousel('humorCarousel', 'left')"></button>
+                    <button class="fa-solid fa-angle-right " onclick="scrollCarousel('humorCarousel', 'right')"></button>
+                  </div>
+                </div>
+                <!-- fim de categorias -->
+              </div>
+
+            <!-- Otros elementos de la página a anadir
+             -->
+
+        </main>
+    </div>
+
+    <footer class="mt-5">
+        <div class="links-social">
+            <a class="fa-brands fa-facebook-f link-social" href="https://www.facebook.com/"></a>
+            <a class="fa-brands fa-instagram link-social" href="https://www.instagram.com"></a>
+            <a class="fa-brands fa-twitter link-social" href="https://twitter.com" title="Logo de Twitter"></a>
+            <a class="fa-brands fa-youtube link-social" href="https://www.youtube.com"></a>
+          </div>
+          <div class="links-listas">
+            <div class="lista-footer">
+              <ul class="lista">
+                <a href="#">
+                  <li>Idioma y Subtítulos</li>
+                </a>
+                <a href="#">
+                  <li>Prensa</li>
+                </a>
+                <a href="">
+                  <li>Privacidad</li>
+                </a>
+                <a href="">
+                  <li>Contacto</li>
+                </a>
+              </ul>
+              <button class="service-code">Código del Servicio</button>
+              <p class="netflix-company">© 1997-2024 Netflix. Inc.</p>
+            </div>
+            <div class="lista-footer">
+              <ul class="lista">
+                <a href="">
+                  <li>Descripción de Audio</li>
+                </a>
+                <a href="">
+                  <li>Relaciones con inversores</li>
+                </a>
+                <a href="">
+                  <li>Avisos legales</li>
+                </a>
+              </ul>
+            </div>
+            <div class="lista-footer">
+              <ul class="lista">
+                <a href="">
+                  <li>Centro de Ayuda</li>
+                </a>
+                <a href="">
+                  <li>Carreras</li>
+                </a>
+                <a href="">
+                  <li>Preferencias de Cookies</li>
+                </a>
+              </ul>
+            </div>
+            <div class="lista-footer">
+              <ul class="lista">
+                <a href="">
+                  <li>Tarjeta Prepago</li>
+                </a>
+                <a href="">
+                  <li>Términos de uso</li>
+                </a>
+                <a href="">
+                  <li>Información Corporativa</li>
+                </a>
+              </ul>
+            </div>
+          </div>
+    </footer>
+
+    <!-- scripts -->
+    <script src="./js/script.js"></script>
+    <script src="https://kit.fontawesome.com/163b3848e1.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
